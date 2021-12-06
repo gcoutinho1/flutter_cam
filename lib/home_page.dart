@@ -2,6 +2,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_cam/upload_service.dart';
 import 'package:image_picker/image_picker.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +19,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Cam disto"),
+        actions: [IconButton(icon: Icon(Icons.upload_file), onPressed: _onClickUpload)],
       ),
       body: Center(
         child: Column(
@@ -49,5 +51,11 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _file = image;
     });
+  }
+
+  void _onClickUpload() {
+    if(_file != null){
+      UploadService.upload(_file);
+    }
   }
 }
