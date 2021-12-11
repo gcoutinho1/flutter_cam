@@ -18,7 +18,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text("Cam disto"),
+=======
+        title: Text("Flutter Cam"),
+>>>>>>> master
         actions: [IconButton(icon: Icon(Icons.upload_file), onPressed: _onClickUpload)],
       ),
       body: Center(

@@ -7,7 +7,11 @@ import 'package:path/path.dart' as path;
 
 class UploadService {
   static Future<String> upload(File file) async {
+<<<<<<< HEAD
     String url = "https://carros-springboot.herokuapp.com/api/v1/upload";
+=======
+    String url = "https://urlhere.com/api/v1/upload";
+>>>>>>> master
 
     List<int> imageBytes = file.readAsBytesSync();
     String base64Image = convert.base64Encode(imageBytes);
@@ -51,4 +55,8 @@ class UploadService {
     print("timeout!");
     throw SocketException("Não foi possível se comunicar com o servidor.");
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
